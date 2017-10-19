@@ -1,51 +1,26 @@
 const express = require('express');
 const router = express.Router();
-//const MongoClient = require('mongodb').MongoClient;
-//const ObjectID = require('mongodb').ObjectID;
-/*
-// Connect
-const connection = (closure) => {
-    return MongoClient.connect('mongodb://localhost:27017/mean', (err, db) => {
-        if (err) return console.log(err);
 
-        closure(db);
-    });
-};
-
-// Error handling
-const sendError = (err, res) => {
-    response.status = 501;
-    response.message = typeof err == 'object' ? err.message : err;
-    res.status(501).json(response);
-};
-
-// Response handling
-let response = {
-    status: 200,
-    data: [],
-    message: null
-};
-*/
-// Get users
-/*
-router.get('/users', (req, res) => {
-    connection((db) => {
-        db.collection('users')
-            .find()
-            .toArray()
-            .then((users) => {
-                response.data = users;
-                res.json(response);
-            })
-            .catch((err) => {
-                sendError(err, res);
-            });
-    });
-});
-*/
+var SubscriberController = require('../controllers/subscriberController');
 
 router.get('/home', (req,res) => {
     res.send("THIS IS HOME");
 });
+
+
+//subscriber api
+router.post('/subscriber/create', async (req,res) => {
+    
+    const subscriber = await SubscriberController.create(req);
+    
+    res.send(subscriber);
+});
+router.get('/subscriber/all', async (req,res) => {
+    
+    const subscribers = await SubscriberController.getAllSubscribers();
+    
+    res.send(subscribers);
+});
+
 
 module.exports = router;

@@ -4,6 +4,8 @@ const path = require('path');
 const http = require('http');
 const app = express();
 
+var db_connection = require('./server/db/mongo-connection');
+
 // API file for interacting with MongoDB
 const api = require('./server/routes/api');
 
@@ -27,5 +29,8 @@ const port = process.env.PORT || '5000';
 app.set('port', port);
 
 const server = http.createServer(app);
+
+//connect to mongo
+db_connection.connect();
 
 server.listen(port, () => console.log(`Running on localhost:${port}`));
