@@ -12,3 +12,94 @@ body {
   -o-background-size: cover;
 }
 */
+
+body {
+  /*background-color: #B1DBD8;*/
+  /*background-color: #EEDEC0;*/
+  /*background-color: #f8f8f8;*/
+  background-color: #ffffff;
+}
+
+.contribute-section {
+  padding-top:80px;
+  margin-left:15%;
+  margin-right:15%;
+  padding-bottom: 30px;
+}
+
+.read-more-margins {
+  margin-top:2%;
+  margin-bottom:2%;
+}
+
+.solution-section {
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+.about-section {
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+.contact-section {
+  padding-top:5%;
+  padding-bottom:15%;
+}
+
+
+.button-interested {
+  color:#CC8671 !important;
+  border-color: #CC8671 !important;
+}
+.button-interested:hover {
+  background-color: #CC8671 !important;
+  color:white !important;
+}
+
+.interested {
+  text-align:center;
+}
+
+.center-text {
+  text-align:center;
+}
+
+.interested-punchline {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+.text-light {
+  color:white !important;
+  border-color: white !important;
+}
+
+.read-more-button {
+  margin-top: 150px;
+  /*padding-bottom: 50px;*/
+}
+
+.user-profile img{
+  max-width: 300px;
+  margin-bottom: 2%;
+}
+
+.user-profile h3 {
+  
+  color:#343a40;
+}
+
+.user-profile p {
+  color:#868e96;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.user-profiles img{
+  max-height: 300px;
+}
+
+.user-profiles-title {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}

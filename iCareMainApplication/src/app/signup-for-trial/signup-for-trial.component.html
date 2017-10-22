@@ -1,0 +1,21 @@
+
+
+<form (ngSubmit)="onSubmit()" #subscribeForm="ngForm">
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <input [(ngModel)]="subscriberEmail" name="email" type="text" class="form-control" id="email" required>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="interested">
+          <button type="submit" class="btn btn-outline-light button-interested text-light">Meld meg på!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+    <!--<pre>Email: {{subscriberEmail}}</pre>-->
+
+

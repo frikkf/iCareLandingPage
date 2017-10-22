@@ -4,7 +4,6 @@ module.exports = {
     create: (req) => {
         return new Promise((resolve, reject) => {
             var newSubscriber = new Subscriber({
-                name: req.body.name,
                 email: req.body.email
             });
 
