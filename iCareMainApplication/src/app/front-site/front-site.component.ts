@@ -32,6 +32,10 @@ export class FrontSiteComponent implements OnInit {
 		});
   }
 
+  onSubmit() {
+    console.log("User clicked submit");
+  }
+
   //continue here...
   
 }

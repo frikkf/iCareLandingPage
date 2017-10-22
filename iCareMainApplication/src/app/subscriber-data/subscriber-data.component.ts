@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscriberDataComponent implements OnInit {
 
-  private subscribers: string[];
+  subscribers: string[];
 
   constructor(private backendService: BackendService) { }
 
