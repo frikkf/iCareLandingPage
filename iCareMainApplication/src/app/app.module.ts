@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
-/*import {HttpClientModule} from '@angular/common/http';*/
 import { HttpModule } from '@angular/http';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 /* COMPONENTS */
 import { AppComponent } from './app.component';
@@ -18,19 +18,24 @@ import { NavbarFooterComponent } from './navbar-footer/navbar-footer.component';
 import { SignupForTrialComponent } from './signup-for-trial/signup-for-trial.component';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { SubscriberDataComponent } from './subscriber-data/subscriber-data.component';
+import { SolutionComponent } from './solution/solution.component';
+import { PunchlineComponent } from './punchline/punchline.component';
+import { TeamComponent } from './team/team.component';
 
 /* SERVICES */
-import { BackendService } from './services/backend.service';
+import { BackendService } from './_services/backend.service';
+
+
 
 
 const appRoutes: Routes = [
   {path: '', component: FrontSiteComponent},
   {path: 'home', component: FrontSiteComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'subscribe', component: SubscribeComponent},
-  {path: 'more', component: ReadMoreComponent},
-  {path: 'data', component: SubscriberDataComponent}
+  {path: 'about', component: FrontSiteComponent},
+  {path: 'contact', component: FrontSiteComponent},
+  {path: 'subscribe', component: FrontSiteComponent},
+  {path: 'more', component: FrontSiteComponent},
+  {path: 'data', component: FrontSiteComponent}
 
 ];
 
@@ -45,7 +50,10 @@ const appRoutes: Routes = [
     NavbarFooterComponent,
     SignupForTrialComponent,
     ReadMoreComponent,
-    SubscriberDataComponent
+    SubscriberDataComponent,
+    SolutionComponent,
+    PunchlineComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +61,8 @@ const appRoutes: Routes = [
       appRoutes
     ),
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2PageScrollModule
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]

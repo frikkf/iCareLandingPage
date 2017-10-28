@@ -1,17 +1,19 @@
-<div class="container">
-    <h1>Subscribe Form</h1>
-    <form (ngSubmit)="onSubmit()" #subscribeForm="ngForm">
-      
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input [(ngModel)]="subscriberEmail" name="email" type="text" class="form-control" id="email" required>
+<section class="section-background-dark">  <!-- use section to get background options -->
+  <div class="container-fluid">
+      <div class="row subcribe-height">
+        <div class="col-md-6 offset-md-3 center-text">
+          <form (ngSubmit)="onSubmit()" #subscribeForm="ngForm">
+              <div class="input-group subcribe-group">
+                <input [(ngModel)]="subscriberEmail" name="email" type="text" class="form-control subscribe-input" placeholder="Registrer deg som interessert" id="email" required aria-label="Search for...">
+                <div class="btn-subscribe-background">
+                <div class="center-vertically">
+                  
+                    <button class="btn btn-secondary btn-outline-light btn-subscribe " type="submit"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
       </div>
-      
-      <div class="interested">
-        <button type="submit" class="btn btn-outline-light button-interested">Gi meg beskjed!</button>
-      </div>
- 
-    </form>
-    <!--<pre>Email: {{subscriberEmail}}</pre>-->
-</div>
-
+  </div>
+</section>

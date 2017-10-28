@@ -1,8 +1,8 @@
-import { BackendService } from './../services/backend.service';
+import { BackendService } from './../_services/backend.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-subscribe',
+  selector: 'subscribe-section',
   templateUrl: './subscribe.component.html',
   styleUrls: ['./subscribe.component.css']
 })
